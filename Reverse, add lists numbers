@@ -1,0 +1,22 @@
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        reversed_list1 = l1[::-1]
+        reversed_list2 = l2[::-1]
+
+        number1 = int(''.join(map(str, reversed_list1)))
+        number2 = int(''.join(map(str, reversed_list2)))
+
+        added_numbers = number1 + number2 
+
+        list_map_added_numbers = list(map(int, str(added_numbers)[::-1]))
+        print(list_map_added_numbers)
+
+list1_input = input("Enter First list of Numbers: ")
+list2_input = input("Enter Second list of Numbers: ")
+
+l1 = list(map(int, list1_input.split(',')))
+l2 = list(map(int, list2_input.split(',')))
+
+sol = Solution()
+
+result = sol.addTwoNumbers(l1, l2)
